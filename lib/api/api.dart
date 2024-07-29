@@ -1,0 +1,1 @@
+enum ErrorType { network, client, server, general }

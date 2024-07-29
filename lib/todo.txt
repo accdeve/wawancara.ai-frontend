@@ -1,0 +1,12 @@
+List Pekerjaan
+==============
+
+FRONTEND
+--------
+1. ganti video menjadi fail atau fifi
+
+PUBLISH
+-------
+1. backend di vps
+
+2. aab di play store
