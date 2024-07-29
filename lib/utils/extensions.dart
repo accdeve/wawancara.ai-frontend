@@ -1,7 +1,8 @@
+// ignore_for_file: library_prefixes
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl/intl.dart';
 import 'package:wawancara_ai/utils/routes.dart' as AppRoute;
 
 void backToRoot(context) {
@@ -55,20 +56,19 @@ void pushAndRemoveScreen(BuildContext context, {required Widget pageRef}) {
   Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => pageRef), (Route<dynamic> route) => false);
 }
 
-String toRupiah(int number) {
-  if (number == null) return "-";
-  final currencyFormatter = NumberFormat('#,##0', 'ID');
-  return currencyFormatter.format(number);
-}
+// String toRupiah(int number) {
+//   final currencyFormatter = NumberFormat('#,##0', 'ID');
+//   return currencyFormatter.format(number);
+// }
 
-String shortCurr(int number) {
-  return number < 1000000 ? toRupiah(number) : convCurr(number);
-}
+// String shortCurr(int number) {
+//   return number < 1000000 ? toRupiah(number) : convCurr(number);
+// }
 
-String convCurr(int number) {
-  final currencyFormatter = NumberFormat.compact(locale: 'ID');
-  return currencyFormatter.format(number);
-}
+// String convCurr(int number) {
+//   final currencyFormatter = NumberFormat.compact(locale: 'ID');
+//   return currencyFormatter.format(number);
+// }
 
 String formatDuration(Duration duration) {
   String twoDigits(int n) => n.toString().padLeft(2, '0');
@@ -85,7 +85,7 @@ void handleCopy(BuildContext context, String text, String message) {
     ..showSnackBar(
       SnackBar(
         margin: EdgeInsets.zero,
-        duration: Duration(seconds: 2),
+        duration: const Duration(seconds: 2),
         content: Text(message),
         backgroundColor: Colors.grey[900],
         behavior: SnackBarBehavior.floating,
@@ -99,10 +99,10 @@ void handleCopy(BuildContext context, String text, String message) {
 /// Returns:
 ///   `day` `day(int)` `month` `year`
 ///ex: Senin 2 Agustus 2022
-String formatDate(DateTime dateTime) {
-  final formatter = DateFormat('EEEE d MMMM yyyy', 'id');
-  return formatter.format(dateTime);
-}
+// String formatDate(DateTime dateTime) {
+//   final formatter = DateFormat('EEEE d MMMM yyyy', 'id');
+//   return formatter.format(dateTime);
+// }
 
 String capitalize(String s) {
   if (s.isEmpty) {
@@ -114,7 +114,7 @@ String capitalize(String s) {
 String truncateText(String text, int wordLimit) {
   List<String> words = text.split(' ');
   if (words.length > wordLimit) {
-    return words.sublist(0, wordLimit).join(' ') + '...';
+    return '${words.sublist(0, wordLimit).join(' ')}...';
   }
   return text;
 }

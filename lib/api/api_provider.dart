@@ -1,7 +1,7 @@
 // Source:
 // https://medium.com/flutter-community/handling-network-calls-like-a-pro-in-flutter-31bd30c86be1
 
-// ignore_for_file: prefer_typing_uninitialized_variables
+// ignore_for_file: prefer_typing_uninitialized_variables, library_prefixes
 
 import 'dart:convert';
 import 'dart:io';
@@ -112,7 +112,6 @@ class ApiProvider {
 
     if (kDebugMode) {
       String responseJsonStr = response.body;
-      String endpointPath = response.request!.url.path;
       String endpointStr = response.request!.url.toString();
       String endpointMethod = response.request!.method;
 

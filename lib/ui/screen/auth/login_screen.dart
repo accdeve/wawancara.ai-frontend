@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wawancara_ai/ui/screen/auth/register_screen.dart';
-import 'package:wawancara_ai/ui/widget/text_field/text_field_widget.dart';
 import 'package:wawancara_ai/ui/screen/home/widget/nav_bar.dart';
 import 'package:wawancara_ai/ui/widget/button/primary_button.dart';
 import 'package:wawancara_ai/utils/assets.dart';

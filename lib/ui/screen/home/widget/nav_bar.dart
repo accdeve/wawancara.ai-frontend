@@ -7,7 +7,7 @@ import 'package:wawancara_ai/utils/colors.dart';
 
 class Navbar extends StatefulWidget {
   static const routename = "navbar";
-  const Navbar({Key? key}) : super(key: key);
+  const Navbar({super.key});
 
   @override
   State<Navbar> createState() => _NavbarState();

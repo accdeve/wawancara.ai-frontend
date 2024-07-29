@@ -30,17 +30,17 @@ class InvalidInputException extends ApiException {
 }
 
 class ClientException extends ApiException {
-  ClientException([String? message]) : super(message);
+  ClientException([String? super.message]);
 }
 
 class ServerException extends ApiException {
-  ServerException([String? message]) : super(message);
+  ServerException([String? super.message]);
 }
 
 class NetworkException extends ApiException {
-  NetworkException([String? message]) : super(message);
+  NetworkException([String? super.message]);
 }
 
 class GeneralException extends ApiException {
-  GeneralException([String? message]) : super(message);
+  GeneralException([String? super.message]);
 }

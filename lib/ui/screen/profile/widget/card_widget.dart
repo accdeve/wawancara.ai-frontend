@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wawancara_ai/utils/typography.dart';
 
 class CardWidget extends StatelessWidget {
-  CardWidget({super.key, required this.jumlah, required this.pertanyaan});
+  const CardWidget({super.key, required this.jumlah, required this.pertanyaan});
   final int jumlah;
   final String pertanyaan;
 
@@ -10,10 +10,10 @@ class CardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final gradientColors = pertanyaan == "Pertanyaan custom"
         ? [
-            Color(0xFFFF71CD),
-            Color.fromARGB(255, 255, 177, 228)
+            const Color(0xFFFF71CD),
+            const Color.fromARGB(255, 255, 177, 228)
           ] // Warna custom
-        : [Color(0xFF008FFF), Color(0xFF00BFFF)]; // Warna default
+        : [const Color(0xFF008FFF), const Color(0xFF00BFFF)]; // Warna default
     return Container(
       padding: const EdgeInsets.all(8),
       width: 200,
